@@ -1,0 +1,26 @@
+[project]
+authors = [{name = "Cam", email = "Cameron.j.poole@gmail.com"}]
+dependencies = []
+description = "Add a short description here"
+name = "wildfireEntrapment"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+wildfireEntrapment = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+osmnx = ">=2.0.1,<3"
+networkx = ">=3.4.2,<4"
+pixi-pycharm = ">=0.0.8,<0.0.9"
+jupyter = ">=1.1.1,<2"
